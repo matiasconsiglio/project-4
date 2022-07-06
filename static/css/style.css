@@ -5,9 +5,7 @@
     padding: 0;  
     border: none;  
 }
-html{
-    scroll-padding-top: 140px;
-}
+
 html, body {
     overflow-x:hidden;
     width: 100%;
@@ -33,12 +31,87 @@ body{
     z-index: 3;
 }
 
+.first-logo{
+    font-family: 'Play', sans-serif;
+    float: left;
+    font-weight: 500;
+    font-size: 200%;
+    margin-left: 50px;
+    margin-top: 40px;
+    letter-spacing: -2px;
+    color:var(--light_blue);
+    text-decoration: none;
+}
+
+.second-logo{
+    font-family: 'Play', sans-serif;
+    float: left;
+    font-weight: 500;
+    font-size: 150%;
+    margin-left: 20px;
+    margin-top: 46px;
+    letter-spacing: -2px;
+    color:var(--light_blue);
+    text-decoration: none;
+}
+
+.menu{
+    font-size: 125%;
+    letter-spacing: 4px;
+    margin-top: 50px;
+    margin-right: 50px;
+    font-family: 'Play', sans-serif;
+    
+}
+.menu  li{
+    float: right;
+    list-style-type: none;
+    margin-right: 50px;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--light_blue);
+}
+
+.footer{
+    height: 75px;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    background: linear-gradient(180deg,var(--black)  0%, var(--blue) 100%);
+    z-index: 3;
+}
+
+.social-networks{
+    text-align: center;
+}
+
+.social-networks > li{
+    display: inline;
+    margin:125px
+}
+
+.social-networks i{
+    font-size: 250%;
+    color: var(--light_blue);
+    margin-top: 20px;
+}
+
+.space-top{
+    margin-top: 100px;
+}
+
+
+
+
 .brand {
     font-family: Lato, sans-serif;
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
 }
+
+
 
 .red-o {
     color: #E84610;
@@ -62,7 +135,7 @@ body{
 
 .card {
     border: none;
-    background-color: transparent;
+    background-color: var(--black);
 }
 
 .image-container {
@@ -172,23 +245,3 @@ body{
     border: none;
 }
 
-.footer{
-    height: 75px;
-    width: 100%;
-    position: fixed;
-    bottom:0;
-    background: linear-gradient(180deg,var(--black)  0%, var(--blue) 100%);
-    z-index: 3;
-}
-.social-networks{
-    text-align: center;
-}
-.social-networks > li{
-    display: inline;
-    margin:125px
-}
-.social-networks i{
-    font-size: 250%;
-    color: var(--light_blue);
-    margin-top: 20px;
-}
