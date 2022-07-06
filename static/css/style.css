@@ -97,9 +97,52 @@ body{
     margin-top: 20px;
 }
 
-.space-top{
-    margin-top: 100px;
+.social-networks i:hover{
+    color: var(--blue);
 }
+
+.space-top{
+    margin-top: 75px;
+}
+
+.event-holder{
+    background-color: var(--black);
+}
+
+.card{
+    background-color: transparent;
+}
+
+.card-title{
+    font-family: 'Play', sans-serif;
+    color: var(--light_blue);
+    font-size: 180%;
+}
+
+.card-title:hover{
+    color: var(--blue);
+}
+
+.card-text{
+    font-family: 'Play', sans-serif;
+    color: var(--blue);
+    font-size: 100%;
+}
+
+.image-container {
+    position: relative;
+}
+
+.next-prev{
+    font-family: 'Play', sans-serif;
+    color: var(--light_blue);
+    font-size: 200%;
+    border: 0;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
 
 
 
@@ -109,51 +152,6 @@ body{
     font-size: 1.4rem;
     font-weight: 700;
     color: #4A4A4F;
-}
-
-
-
-.red-o {
-    color: #E84610;
-}
-
-.thin {
-    font-weight: 300;
-}
-
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
-.main-bg {
-    background-color: #F9FAFC;
-}
-
-.card {
-    border: none;
-    background-color: var(--black);
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #23BBBB;
-}
-
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
 }
 
 .masthead {
