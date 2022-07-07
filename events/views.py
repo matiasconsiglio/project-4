@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post
+from .models import Post, photos
 
 class EventList(generic.ListView):
     model = Post
@@ -21,10 +21,18 @@ class EventDetail(View):
 
         return render(
             request,
-            "post_detail.html",
+            "post_details.html",
             {
                 "post": post,
                 "comments": comments,
                 "liked": liked
             },
         )
+
+def base(request):
+    return render(request, 'base.html')
+
+def index(request):
+    photo = photos.objects.all()
+    ctx = {'photos': photo}
+    return render(request, 'base.html', ctx)

@@ -45,3 +45,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class photos (models.Model):
+    title = models.CharField(max_length=100)
+    image = CloudinaryField('image')
