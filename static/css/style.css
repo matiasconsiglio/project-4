@@ -117,6 +117,7 @@ body{
     font-family: 'Play', sans-serif;
     color: var(--light_blue);
     font-size: 180%;
+    text-decoration: none;
 }
 
 .card-title:hover{
@@ -190,6 +191,9 @@ body{
 .btn-signup:active {
     background-color: var(--black);
     color: var(--blue);
+}
+.post-link{
+    text-decoration: none;
 }
 
 
