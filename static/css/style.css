@@ -152,7 +152,7 @@ body{
     position: relative;
     text-align: center;
     display: inline-block;
-    height: 20vh;
+    height: 15vh;
     width: 100%;
 }
 
@@ -165,7 +165,7 @@ body{
 
 .post-title {
     margin-top: 10%;
-    color: var(--blue);
+    color: var(--light_blue);
 }
 
 .like-space{
