@@ -164,6 +164,7 @@ body{
 }
 
 .post-title {
+    font-family: 'Play', sans-serif;
     margin-top: 10%;
     color: var(--light_blue);
 }
@@ -175,6 +176,23 @@ body{
 .comment-space{
     margin-left: 10px;
 }
+
+.login-margin{
+    margin-top: 150px;
+}
+
+.btn-signup {
+    background-color: var(--blue);
+    color: var(--black);
+}
+
+.btn-signup:hover,
+.btn-signup:active {
+    background-color: var(--black);
+    color: var(--blue);
+}
+
+
 
 
 
@@ -192,35 +210,6 @@ body{
 
 
 
-
-
-.post-link {
-    text-decoration: none;
-    color: #445261;
-}
-
-.post-link:hover,
-.page-link {
-    color: #E84610;
-}
-
-
-
-.post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
-}
-
-.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-.btn-signup:hover,
-.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
-}
 
 .link {
     color: #23BBBB;
