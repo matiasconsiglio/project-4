@@ -24,13 +24,8 @@
                             <h2 class="card-title text-center">{{ post.title }}</h2>
                         </a>
                         <hr />
-                        <p class="card-text text-center"><i class="far fa-heart"></i>
+                        <p class="card-text text-center"><i class="fa fa-heart"></i>
                             {{ post.number_of_likes }}
-                            {% with post.comments.count as total_comments %}
-                            <strong><i class="far fa-comments"></i>
-                                <!-- Our total_comments variable goes before the closing strong tag -->
-                                {{ total_comments }}</strong>
-                            {% endwith %}
                         </p>                       
                     </div>
                 </div>

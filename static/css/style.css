@@ -208,9 +208,18 @@ body{
     background-color: var(--black);
 }
 
+.btn-like {
+    color: var(--blue);
+    border: none;
+    background: transparent;
+}
 
-
-
+.btn-like:hover,
+.btn-like:active {
+    color: var(--blue);
+    background: transparent;
+    border: none;
+}
 
 
 
@@ -221,31 +230,3 @@ body{
     position: relative;
     overflow: hidden;
 }
-
-
-
-
-.link {
-    color: #23BBBB;
-    text-decoration: none;
-}
-
-.link:hover,
-.link:active {
-    color: #445261;
-    text-decoration: underline;
-}
-
-.btn-like {
-    color: #E84610;
-    border: none;
-    background: transparent;
-}
-
-.btn-like:hover,
-.btn-like:active {
-    color: #E84610;
-    background: transparent;
-    border: none;
-}
-
