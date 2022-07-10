@@ -105,6 +105,14 @@ body{
     margin-top: 75px;
 }
 
+.space-top-double{
+    margin-top: 150px;
+}
+
+.space-bottom{
+    margin-bottom: 150px;
+}
+
 .event-holder{
     background-color: var(--black);
 }
@@ -196,7 +204,9 @@ body{
     text-decoration: none;
 }
 
-
+.modal-content{
+    background-color: var(--black);
+}
 
 
 

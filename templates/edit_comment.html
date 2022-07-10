@@ -1,17 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
-{% load crispy_forms_tags %}
 
-<div class="masthead">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-12 masthead-text">
-                <!-- Post title goes in these h1 tags -->
-                <h1 class="post-title">{{ post.title }}</h1>
+
+    <div class="">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 masthead-text">
+                    <h2 class="title space-top-double">Update Comment</h2>
+                    <p>Updating as: {{ user.username }}</p>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-signup btn-lg">Update</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+
 
 {% endblock content %}

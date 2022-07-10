@@ -49,8 +49,8 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-8 card mb-4  mt-3 ">
+    <div class="row space-bottom">
+        <div class="col-md-8 card mb-4  mt-3 card-text">
             <h3>Comments:</h3>
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
@@ -67,16 +67,34 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-
-                <!-- {% if request.user == comment.user %}
-                    <a href="{% url 'edit_comment' comment.id %}"><button>Edit comment</button></a>
-                {% endif %} -->
-                <!-- Our for loop ends here -->
+                {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
+                <a href="{% url 'edit_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Edit comment">Edit</a>
+                <button type="button" class="btn btn-signup btn-lg" data-bs-toggle="modal"
+                     data-bs-target="#delete-comment">Delete</button>
+                <div class="modal fade" id="delete-comment"
+                     tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog card-text">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Delete Comment</h5>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to delete your comment?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-signup btn-lg"
+                                    data-bs-dismiss="modal">Close</button>
+                                <a href="{% url 'delete_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Delete Comment">Delete</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>
-        <div class="col-md-4 card mb-4  mt-3 ">
-            <div class="card-body post-title">
+        <div class="col-md-4 card mb-4 mt-3">
+            <div class="card-body card-text">
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
