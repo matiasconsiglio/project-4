@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from .models import Post, photos
+from .models import Post
 from .forms import CommentForm
 
 class EventList(generic.ListView):
@@ -62,11 +62,3 @@ class EventDetail(View):
                 "liked": liked
             },
         )
-
-def base(request):
-    return render(request, 'base.html')
-
-def index(request):
-    photo = photos.objects.all()
-    ctx = {'photos': photo}
-    return render(request, 'base.html', ctx)
