@@ -12,8 +12,7 @@
         </div>
     </div>
 </div>
-
-<div class="container">
+<div class="container margin-top">
     <div class="row">
         <div class="col card mb-4  mt-3 left top">
             <div class="card-body">
@@ -88,25 +87,16 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                {% if user.is_authenticated and user.username == comment.name or user.is_superuser %}
-                <a href="{% url 'edit_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Edit comment">Edit</a>
+                {% if user.is_authenticated and comment.name == user.username %}
+                <a href="{% url 'update_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Update comment">Update</a>
                 <button type="button" class="btn btn-signup btn-lg" data-bs-toggle="modal"
-                     data-bs-target="#delete-comment">Delete</button>
-                <div class="modal fade" id="delete-comment"
-                     tabindex="-1" aria-hidden="true">
+                     data-bs-target="#delete">Delete</button>
+                <div class="modal" id="delete">
                     <div class="modal-dialog card-text">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="staticBackdropLabel">Delete Comment</h5>
-                            </div>
-                            <div class="modal-body">
-                                Are you sure you want to delete your comment?
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-signup btn-lg"
-                                    data-bs-dismiss="modal">Close</button>
-                                <a href="{% url 'delete_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Delete Comment">Delete</a>
-                            </div>
+                            <button type="button" class="btn btn-signup btn-lg"
+                                 data-bs-dismiss="modal">Back</button>
+                            <a href="{% url 'delete_comment' comment.id %}" class="btn btn-signup btn-lg" aria-label="Delete comment">Delete</a>
                         </div>
                     </div>
                 </div>

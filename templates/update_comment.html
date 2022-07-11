@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 masthead-text">
+            <h2 class="title space-top-double">Update Comment</h2>
+            <p>Updating as: {{ user.username }}</p>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit" class="btn btn-signup btn-lg">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

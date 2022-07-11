@@ -68,6 +68,7 @@ class EventDetail(View):
             },
         )
 
+
 class PostLike(View):
     
     def post(self, request, slug, *args, **kwargs):
@@ -80,16 +81,17 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 @login_required
+
 def delete_comment(request, comment_id):
-    """Delete comment"""
+    """Function for deleting a comment for logged user"""
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     return HttpResponseRedirect(reverse(
         'post_detail', args=[comment.post.slug]))
 
 
-class EditComment(LoginRequiredMixin, UpdateView):
-    """Edit comment"""
+class UpdateComment(LoginRequiredMixin, UpdateView):
+    """Function for updating a comment for logged user"""
     model = Comment
-    template_name = 'edit_comment.html'
+    template_name = 'update_comment.html'
     form_class = CommentForm

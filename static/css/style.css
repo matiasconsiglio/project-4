@@ -101,6 +101,25 @@ body{
     color: var(--blue);
 }
 
+.social-networks-post{
+    text-align: center;    
+}
+
+.social-networks-post > li{
+    display: inline;
+    margin:50px
+}
+
+.social-networks-post i{
+    font-size: 250%;
+    color: var(--light_blue);
+    margin-top: 20px;
+}
+
+.social-networks-post i:hover{
+    color: var(--blue);
+}
+
 .space-top{
     margin-top: 75px;
 }
@@ -223,10 +242,16 @@ body{
 
 
 
-
-
-
 .masthead-image {
     position: relative;
     overflow: hidden;
+}
+
+.margin-top{
+    margin-top: -50px;
+}
+
+.post-header{
+    font-family: 'Play', sans-serif;
+    color: var(--light_blue)
 }

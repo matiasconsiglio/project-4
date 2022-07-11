@@ -98,15 +98,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'subtevents.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -161,9 +153,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-cloudinary.config(
-    cloud_name="mattconsiglio",
-    api_key="783661346791192",
-    api_secret="AosdWMTeDqzz6wXS_3V3-JiRn7s"
-    )
