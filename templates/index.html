@@ -3,9 +3,7 @@
 {% block content %}
 
 <div class="container event-holder">
-    <div class="row space-top">
-
-        <!-- Blog Entries Column -->
+    <div class="row space-top margin-bottom">
         <div class="col-12 mt-3 left">
             <div class="row">
             {% for post in post_list %}
@@ -23,7 +21,6 @@
                         <a href="{% url 'post_detail' post.slug  %}" class="post-link">
                             <h2 class="card-title text-center">{{ post.title }}</h2>
                         </a>
-                        <hr />
                         <p class="card-text text-center"><i class="fa fa-heart"></i>
                             {{ post.number_of_likes }}
                         </p>
@@ -49,7 +46,6 @@
             {% endif %}
             {% if page_obj.has_next %}
             <li><a href="?page={{ page_obj.next_page_number }}" class="next-prev">→</a></li>
-
             {% endif %}
         </ul>
     </nav>
