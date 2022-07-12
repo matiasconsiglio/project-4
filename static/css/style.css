@@ -84,6 +84,7 @@ body{
 
 .social-networks{
     text-align: center;
+    padding-left: 0;
 }
 
 .social-networks > li{
@@ -174,16 +175,6 @@ body{
     text-decoration: none;
 }
 
-.masthead {
-    margin-top: 0px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    height: 15vh;
-    width: 100%;
-}
-
 .masthead-text {
     font-family: 'Play', sans-serif;
     background-color: transparent;
@@ -248,10 +239,34 @@ body{
 }
 
 .margin-top{
-    margin-top: -50px;
+    margin-top: -20px;
 }
 
 .post-header{
     font-family: 'Play', sans-serif;
     color: var(--light_blue)
+}
+
+
+@media only screen and (max-width:1000px){
+
+    .social-networks > li{
+        margin:75px
+        }
+    .social-networks i{
+        font-size: 200%;
+        margin-top: 25px;
+        }
+}
+
+@media only screen and (max-width:600px){
+
+    .social-networks > li{
+        margin:35px;
+    }
+
+    .social-networks i{
+        font-size: 200%;
+        margin-top: 27px;
+        }
 }
