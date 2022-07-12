@@ -252,11 +252,32 @@ body{
 
     .social-networks > li{
         margin:75px
-        }
+    }
     .social-networks i{
         font-size: 200%;
         margin-top: 25px;
-        }
+    }
+
+    .media-query-title{
+        margin-top: 40px;
+    }
+   
+    .header-left{
+        float: left;
+    }
+
+    .navbar-collapse{
+        background:black !important;
+    }
+
+    .first-logo{
+        margin-top: 31px;
+    }
+
+    .second-logo{
+        margin-top: 40px;
+    }
+
 }
 
 @media only screen and (max-width:600px){
@@ -269,4 +290,8 @@ body{
         font-size: 200%;
         margin-top: 27px;
         }
+    
+    .media-query-title{
+        margin-top: 65px;
+    }
 }

@@ -27,16 +27,18 @@
 <body class="d-flex flex-column h-100">
 
     <!-- Navigation -->
-    <nav class="header navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+    <nav class="header navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="header-left">
             <a class="first-logo" href="{% url 'home' %}">ΠΛΤΤ</a>
-            <a class="second-logo" href="{% url 'home' %}">Sessions</a>
+            <a class="second-logo fixed-left" href="{% url 'home' %}">Sessions</a>
+            </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="menu ms-auto mb-2 mb-lg-0">
+            <div class="navbar-collapse" id="navbarText">
+                <ul class="menu ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
