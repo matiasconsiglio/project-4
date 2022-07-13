@@ -6,7 +6,7 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
 
 ![Welcome image](/assets/readme-images/first-run.png)
 
-## User Stories, Project Goals and Agile Metodology
+## User Stories, Project Goals, Agile Metodology and Diagram for UX
 
 ### Project Goals
 
@@ -72,9 +72,15 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
 
 ### [Agile Metodology used to accomplish the goals from the project via User Stories](https://github.com/matiasconsiglio/project-4/projects/1)
 
+### Diagram for UX design
+
+![Diagram for Ux Design](/assets/readme-images/diagram.png)
+
+- All the special pages for login, register, logout and update comment share the same navbar and footer as the main view.
+
 ## Features
 
-### Existing Features Tested Manually
+### Existing Features Tested Manually and Messages for User
 
 - Responsive on all device sizes and has interactive elements.
 
