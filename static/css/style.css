@@ -249,9 +249,13 @@ body{
     margin-bottom: 75px;
 }
 .navbar-collapse{
-    align-items: right ;
+    align-items: right;
 }
+.youtube{
+    width: 900px;
+    height: 700px;
 
+}
 @media only screen and (max-width:1000px){
 
     .social-networks > li{
@@ -281,7 +285,9 @@ body{
     .second-logo{
         margin-top: 40px;
     }
-
+    .youtube{
+        width: 550px;
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -298,4 +304,22 @@ body{
     .media-query-title{
         margin-top: 65px;
     }
+
+    .youtube{
+        width: 400px;
+    }
 }
+
+/* @media only screen and (max-width:769px){
+    
+    .youtube{
+        width: 550px;
+    }
+}
+
+@media only screen and (max-width:560px){
+    
+    .youtube{
+        width: 400px;
+    }
+} */
