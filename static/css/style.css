@@ -9,7 +9,7 @@
 html, body {
     overflow-x:hidden;
     width: 100%;
-    }
+}
 
 body{
     background-color:var(--black);
@@ -68,6 +68,7 @@ body{
     list-style-type: none;
     margin-right: 50px;
 }
+
 .menu a{
     text-decoration: none;
     color: var(--light_blue);
@@ -261,6 +262,7 @@ body{
     .social-networks > li{
         margin:75px
     }
+
     .social-networks i{
         font-size: 200%;
         margin-top: 25px;
@@ -285,6 +287,7 @@ body{
     .second-logo{
         margin-top: 40px;
     }
+
     .youtube{
         width: 550px;
     }
@@ -299,7 +302,7 @@ body{
     .social-networks i{
         font-size: 200%;
         margin-top: 27px;
-        }
+    }
     
     .media-query-title{
         margin-top: 65px;
@@ -309,17 +312,3 @@ body{
         width: 400px;
     }
 }
-
-/* @media only screen and (max-width:769px){
-    
-    .youtube{
-        width: 550px;
-    }
-}
-
-@media only screen and (max-width:560px){
-    
-    .youtube{
-        width: 400px;
-    }
-} */

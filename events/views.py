@@ -9,6 +9,12 @@ from .forms import CommentForm
 
 
 class EventList(generic.ListView):
+    """
+    Class for rendering finished events macro view in base.html
+
+    Parameters:
+    Html list view
+    """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
     template_name = 'index.html'
@@ -16,7 +22,16 @@ class EventList(generic.ListView):
 
 
 class EventDetail(View):
+    """
+    Class for rendering finished events micro view in base.html
 
+    Parameters:
+    Html list view from event
+    Request:
+    post_detail.html
+    Returns:
+    Html with events attributes with approved comments and likes
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -70,7 +85,14 @@ class EventDetail(View):
 
 
 class PostLike(View):
-    
+    """
+    Class used to see if some user has liked the event
+
+    Parameters:
+    View
+    Returns:
+    Relod of base.html and post_detail.html with count of likes updated
+    """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -80,10 +102,17 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-@login_required
 
+@login_required
 def delete_comment(request, comment_id):
-    """Function for deleting a comment for logged user"""
+    """
+    Function for deleting a comment for logged user
+
+    Parameters:
+    request, comment id
+    Returns:
+    base.html with post_detail.html view updated with comment deleted
+    """
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
     return HttpResponseRedirect(reverse(
@@ -91,7 +120,12 @@ def delete_comment(request, comment_id):
 
 
 class UpdateComment(LoginRequiredMixin, UpdateView):
-    """Function for updating a comment for logged user"""
+    """
+    Function for updating a comment for logged user
+
+    Parameters:
+    LoginRequiredMixin, UpdateView
+    """
     model = Comment
     template_name = 'update_comment.html'
     form_class = CommentForm
