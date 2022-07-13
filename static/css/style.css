@@ -9,7 +9,7 @@
 html, body {
     overflow-x:hidden;
     width: 100%;
-}
+    }
 
 body{
     background-color:var(--black);
@@ -68,7 +68,6 @@ body{
     list-style-type: none;
     margin-right: 50px;
 }
-
 .menu a{
     text-decoration: none;
     color: var(--light_blue);
