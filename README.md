@@ -82,8 +82,6 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
 
 ### Existing Features Tested Manually and Messages for User
 
-- Responsive on all device sizes and has interactive elements.
-
 -  Welcomes the user to the events blog "ΠΛΤΤ Sessions".
 
     - Has a Logo with link to the home page.
@@ -154,172 +152,31 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
  
 ![Event post intro](/assets/readme-images/session2-1.png)
 ![Event guest dj video and audio](/assets/readme-images/session2-2.png)
-- Third Input: Name of first student.
-
-    - Ask the user to input the name of the first student.
-    - Ask the user to input the name of the student with just alphabetical characters. "space" is also allowed. Users can enter only First name, Only Last name or both together.
-    - Program is not affected by uppercase or lowercase letters.
-    - Shows the place for the input.
+- 
+    - 
   
 ![Third Input: Name of first student](/assets/readme-images/third_input.png)
-- Output from Third Input.
 
-    - For this scenario the input was: Matias Castro
-    - Output message for valid data.
-    - Let the user know that the data is being updated in the grade and results worksheets.
-    - Let the user know that the data was successfully updated to worksheets.
+- Responsive on all device sizes and has interactive elements.
 
-![Third Output: Valid student name and name saved to worksheets](/assets/readme-images/third_output.png)
-![grade worksheet updated](/assets/readme-images/grade_updated_2.png)
-![results worksheet updated](/assets/readme-images/results_updated.png)
-- Fourth Input: Score for each question of the first student.
+    - Web
+    - Ipad Air
+    - Iphone 12 pro
 
-    - Ask the user to input the score for each question of the exam.
-    - Ask the user to input the number of "scores" depending on how many questions the user initially input.
-    - Explain how the input must be in this case 2 integers separated by comma. If the user input initially 3 questions the program will ask the user to input 3 different scores.
-    - Each score must be between 0 and 100.
-    - Shows the place for the input.
-  
-![Fourth Input: Score for each question of first student.](/assets/readme-images/fourth_input.png)
-- Output from Fourth Input.
-
-    - For this scenario the input was: score 1 = 55 points and score 2 = 65 points. So: 55,65
-    - Output message for valid data.
-    - Let the user know that the data is being updated in the grade worksheet.
-    - Let the user know that the data was successfully updated to the worksheet.
-    - Output result for current student "Matias Castro". Final grade of 61 points and the student passes because the final score is equal or higher than 60 points.
-    - Let the user know that the data is being updated in the results worksheet.
-    - Let the user know that the data was successfully updated to the worksheet.
-
-
-![Fourth Output: Valid score per question, final grade, and pass result... Information saved to worksheets](/assets/readme-images/fourth_output.png)
-![grade worksheet updated](/assets/readme-images/grade_updated_3.png)
-![results worksheet updated](/assets/readme-images/results_updated_2.png)
-- Loop Input
-
-    - After grade and exam result for student one, the program will continue asking for all the students names and the scores they got in each one of the questions from the exam.
-
-- Loop Output
-
-    - As the program gives the output of the final grade and the pass result to the first student, it will continue to give the final grade and pass result for each student.
-    - Final grade rounded with round() function.
-
-![Loop Input Output: repeat process of input and output for every student.](/assets/readme-images/loop.png)
-![Final grade worksheet updated](/assets/readme-images/final_grade.png)
-![Final results worksheet updated](/assets/readme-images/final_results.png)
-
-- Running the program again
-
-    - If the user decides to run the program again. At the start of it, the program will clear all the worksheets and add specific titles for each one of them.
-
-![Cleaned quantity worksheet](/assets/readme-images/quantity_initial.png)
-![Cleaned grade worksheet](/assets/readme-images/grade_initial.png)
-![Cleaned ponderation worksheet](/assets/readme-images/ponderation_initial.png)
-![Cleaned results worksheet](/assets/readme-images/results_initial.png)
+![Introduction view web](/assets/readme-images/web.png)
+ ![Introduction view ipad air](/assets/readme-images/ipad_air.png)
+ ![Introduction view iphone 12 pro](/assets/readme-images/iphone_12_pro.png)
 
 ## Features Left to Implement
 
-- Allow the user to download the google spreadsheets with all the input and output information.
-- Combine quantity and ponderation worksheets together.
-- Combine grades and results worksheets together.
-- Asking for only First and Last name option as student name, both with uppercase in the first letter.
+- Allow the user to change password.
+- Allow the user to recover password.
 
-## User Experience (UX)
 
-### User stories as first time visitor goals
-
-- As a First Time Visitor, I want to easily understand the main purpose of the program.
-- As a First Time Visitor, I want to be able to navigate throughout the program in an easy way and be able to understand the content.
-- As a First Time Visitor, I want to be able to get information back from the program.
-
-### Testing User Stories from User Experience (UX) Section
-
-- As a First Time Visitor, I want to easily understand the main purpose of the program.
-
-    - Users are greeted with a welcome message.
-    - Users can have fast access to the instructions and purpose of the program.
-    - Users are given examples of what the program does.
-
-- As a First Time Visitor, I want to be able to navigate throughout the program in an easy way and be able to understand the content.
-
-    - The program is giving information and explaining what it expects as input from the user through the whole process.
-    - The program is giving feedback continuously through the program via Output for the user to understand what is happening and what comes next.
-
-- As a First Time Visitor, I want to be able to get information back from the program.
-
-    - The program after every input from the user gives an output with precise information for the user to keep a clear understanding of what is happening.
-
-## Testing
-
-- pep8online.com
-
-  - No errors were returned when passing through the official pep8online.com validator.
-
-![PEP8 Validator](/assets/readme-images/pep8online.png)
-
-- Correct input
-
-    - In the Existing Features section, it was shown how the program works and what to expect with correct input. Tested and every feature works properly. In terms of space this process will not be repeated since it was already done.
-
-- Incorrect Input for quantity of students and questions: 
-
-    - Input: not integer, more or less than 2 inputs, less than 1 student or 1 question including negatives.  
-
-![Not integer error](/assets/readme-images/not_int_error_1.png)
-
-![More or less than 2 inputs error](/assets/readme-images/not_2_input.png)
-
-![Less than error](/assets/readme-images/less_than_1.png)
-
-- Incorrect Input for % of each question of ponderation of total grade: 
-
-    - Input: not integer, more or less inputs than quantity of question input, percentage higher than 100 or lower than 0, add of different % resulting different than 100%. 
-
-![Not integer error](/assets/readme-images/ponderation_no_int.png)
-
-![More or less inputs than quantity of question input](/assets/readme-images/ponderation_more_less_inputs.png)
-
-![Percentage higher than 100 or lower than 0](/assets/readme-images/ponderation_outbounds.png)
-
-![Percentage does not add 100](/assets/readme-images/ponderatio_no_100.png)
-
-- Incorrect Input Student Name: 
-
-    - Input: not integer, symbols not alphabetic.
-
-![Student Name int](/assets/readme-images/name_student_int.png)
-
-![Student Name symbol](/assets/readme-images/name_student_symbol.png)
-
-- Incorrect Input for score of each question of the exam: 
-
-    - Input: not integer, more or less inputs than quantity of question input, score higher than 100 or lower than 0.
-
-![Not integer error](/assets/readme-images/score_not_int.png)
-
-![More or less inputs than quantity of question input](/assets/readme-images/score_more_less_inputs.png)
-
-![Score higher than 100 or lower than 0](/assets/readme-images/score_outbounds.png)
-
-- All different scenarios are tested, program will show error to the user if any input is not correct, program will not fail.
-
-### Different View by Device
-
-- Web
-
-![Introduction view web](/assets/readme-images/web.png)
-- Ipad Air
-
-![Introduction view ipad air](/assets/readme-images/ipad_air.png)
-- Iphone 12 pro
-
-![Introduction view iphone 12 pro](/assets/readme-images/iphone_12_pro.png)
 ### Bugs
 
-- App won't work properly on smartphones.
-- When the user input a negative % with a positive % that adds on 100% for the ponderation input the data was shown as valid. Bug fixed, problem in code line 273 "quantity_ponderation_int = [int(x) for x in ponderation_values]". Used "()" instead of "[]", function was created instead of list. Bug fixed with the help of the mentor.
-- Name of student can be first name, last name or both together, no uppercase or lowercase restriction included.
-- No more Bugs.
+- If a Logged-in User comments a posta and after that the Admin approves the comment, then the user refresh the page, the message "comment waiting for approval" will still be there instead of the posibility to create a new comment. For this the user needs to go home and then back to the event page to be able to comment again.
+
 
 ## Deployment
 
@@ -357,10 +214,6 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
 - Gspread, Google API used to be able to communicate python in Github with google sheets. CREDS.json are the private credentials used so the program could connect with spreadsheets in a private gmail.com account in google drive.
 - Config Vars: Key = PORT, value = 8000 improve compatibility with various Python libraries in heroku. 
 - Python and nodejs, that handles the mock terminal code provided, added in Heroku via "buildpacks".
-
-## Macro vision of program and work done
-
-![Steps flowchart](/assets/readme-images/flowchart.png)
 
 ## Credits
 

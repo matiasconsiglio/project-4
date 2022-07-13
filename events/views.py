@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.views.generic import UpdateView
@@ -129,3 +129,12 @@ class UpdateComment(LoginRequiredMixin, UpdateView):
     model = Comment
     template_name = 'update_comment.html'
     form_class = CommentForm
+
+    def form_valid(self, form):
+
+        comment = form.save()
+        comment.approved = False
+        comment.save()
+
+        return HttpResponseRedirect(self.get_success_url())
+    
