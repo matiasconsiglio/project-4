@@ -76,7 +76,7 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
 
 ![Diagram for Ux Design](/assets/readme-images/diagram.png)
 
-- All the special pages for login, register, logout and update comment share the same navbar and footer as the main view.
+- All the special pages for login, register, logout and update comment should share the same navbar and footer as the main view.
 
 ## Features
 
@@ -94,7 +94,14 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
     - In case the user is logged in, the navbar won't show register and login, instead will show the option Logout.
 
 ![First blog approach](/assets/readme-images/first-run.png)
+
+First blog approach.
+
+
 ![Blog Logout](/assets/readme-images/first-run-logout.png)
+
+Blog log out option and message.
+
 
 - Register for User.
 
@@ -105,10 +112,18 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
     - Sign up button for confirmation.
     - Message shown in case name of user already exist.
     - Navbar and footer keeps the style of welcome page.
+    - Link that allows you to go to the sign in page in case you already have an account created.
 
  
 ![Registration](/assets/readme-images/register.png)
+
+Register page with link to sign in page.
+
+
 ![User already exist](/assets/readme-images/user-exist.png)
+
+User already exist message.
+
 
 - Login for User.
 
@@ -118,18 +133,35 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
     - Sign in button
     - Message shown in case the username or password is incorrect.
     - Navbar and footer keeps the style of welcome page.
+    - Link that allows you to go to the register page in case you don't have an account created.
 
 ![Login](/assets/readme-images/login.png)
+
+Login Page with message and link for register.
+
+
 ![Incorrect login](/assets/readme-images/incorrect-login.png)
+
+Incorrect loggin. 
+
 
 - Logout
 
     - Logout message asking the user if its sure they want to logout.
     - Sign out button.
     - Navbar and footer keeps the style of welcome page.
+    - Once Sign Out is clicked the user is redirected to the home page.
 
 
 ![Logout](/assets/readme-images/logout.png)
+
+Sign out confirmation page.
+
+
+![Home](/assets/readme-images/first-run.png)
+
+Redirect to home after sign out.
+
 
 - Event
 
@@ -150,27 +182,145 @@ This events blog style, for the Full Stack Project from Code Institue, consist i
         - If the user already commented and the comment was approved; posibility of updating and/or deleting the same user comment.
         - Like the event.
  
-![Event post intro](/assets/readme-images/session2-1.png)
+![Event post intro plus like option](/assets/readme-images/session2-1.png)
+
+Event first view liked by user.
+
+
+![Home page with like](/assets/readme-images/home-like.png)
+
+Home page with like.
+
+
 ![Event guest dj video and audio](/assets/readme-images/session2-2.png)
-- 
-    - 
+
+Guest dj media.
+
+
+![Matt media 1](/assets/readme-images/mattmedia1.png)
+
+ΠΛΤΤ media.
+
+
+![Matt media 2](/assets/readme-images/mattmedia2.png)
+
+ΠΛΤΤ media.
+
+
+![Matt media 3](/assets/readme-images/mattmedia3.png)
+
+ΠΛΤΤ media.
+
+
+![Logged in comment view](/assets/readme-images/loggedin-comment-view.png)
+
+Logged in comment view.
+
+
+![Logged in commented waiting for approval](/assets/readme-images/comment-view-waiting-approval.png)
+
+Logged in comment sent waiting for approval.
+
+
+![Logged in comments view](/assets/readme-images/loggedin-comment-approved.png)
+
+Logged in comment section after approval.
+
+
+![Logged out comment view](/assets/readme-images/logged-out-comment-view.png)
+
+Logged out comment section.
+
+
+- Update comment.
+    - Only available for logged in user and for updating own user comment.
+    - Sends you to another page to update and send your new comment
+    - New comment needs approval.
+    - Old comment gets deleted.
+
+![Logged in comments view](/assets/readme-images/loggedin-comment-approved.png)
+
+Logged in comment section after approval.
+
+
+![Update comment view](/assets/readme-images/update-comment.png)
+
+Update comment view.
+
+
+![Update comment waiting for approval](/assets/readme-images/update-comment-waiting-approval.png)
+
+Update comment waiting for approval.
+
+
+![Update comment view after approval](/assets/readme-images/update-comment-approved.png)
+
+Update comment view after approval.
+
+
+![Different user logged in comments view](/assets/readme-images/different-user-logged-comment-view.png)
+
+Different user logged in comments view.
+
   
-![Third Input: Name of first student](/assets/readme-images/third_input.png)
+- Delete comment.
+   - Only available for logged in user and for deleting own user comment.
+   - Pop-up message with back and delete confirmation option.
+
+![Delete in comments view](/assets/readme-images/delete-comment.png)
+
+Delete in comments view logged in as author.
+
+
+![Delete pop-up message confirmation](/assets/readme-images/delete-comment-pop-up.png)
+
+Delete pop-up message confirmation.
+
+
+![View after choosing back deleting](/assets/readme-images/delete-comment-back.png)
+
+View after choosing back deleting.
+
+
+![View after deleting comment](/assets/readme-images/deleted-comment.png)
+
+View after deleting comment.
+
+
+![Delete option view for different user than author](/assets/readme-images/delete-comment-other-user-logged-in.png)
+
+Delete option view for different user than author of comment.
+
 
 - Responsive on all device sizes and has interactive elements.
 
-    - Web
-    - Ipad Air
-    - Iphone 12 pro
+    - Web, ipad Air and Iphone 12 pro.
 
-![Introduction view web](/assets/readme-images/web.png)
- ![Introduction view ipad air](/assets/readme-images/ipad_air.png)
- ![Introduction view iphone 12 pro](/assets/readme-images/iphone_12_pro.png)
+![Welcome image](/assets/readme-images/first-run.png)
+
+Web.
+
+
+![Ipda Air view](/assets/readme-images/ipad-air.png)
+
+Ipad.
+
+
+![Iphone 12 pro view](/assets/readme-images/iphone-12-pro.png)
+
+Iphone 12 pro.
+
+
+![Navbar open menu](/assets/readme-images/iphone-12-pro-open-menu.png)
+
+Navbar open menu.
+
 
 ## Features Left to Implement
 
 - Allow the user to change password.
 - Allow the user to recover password.
+- Updated comment message "waiting to be approved".
 
 
 ### Bugs
