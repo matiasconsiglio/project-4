@@ -330,46 +330,99 @@ Navbar open menu.
 
 ## Deployment
 
-- The site was deployed to heroku.com using Code Institute's mock terminal for Heroku.
+- The site was deployed to heroku.com using Code Institute's mock terminal for Heroku. For this is needed to install Djando and supporting libraries, create a new blank Django prokect and app, set the project to use cloudinary and PostgreSQL and deploy to heroku.
 
-    1. Each input in the run.py must end with "\n" so the input line for each input appears in heroku.
-    2. All the dependencies installed through the Code Institute template and both gspread and google-auth in Github must be installed in heroku also for the program to work. For this in the terminal "pip3 freeze > requirements.txt" must be typed. Requirement.txt bus be correctly spelled because heroku while loading the program will search for the dependencies in this folder to install them and then after allowing the code to run.
-    3. Git add . command plus git commit -m "Add requirements for deployment." and git push commands must be input to the terminal.
-    4. Create an account in heroku.com
-    5. Input name, last name, email address, student role, country in this case Sweden and Python as primary development language. Finally reCAPTCHA and create an account.
-    6. Confirm account in email.
-    7. Create password and Login.
-    8. Accepts terms and services.
-    9. Create the first app from heroku dashboard.
-    10. Select a unique name for the app and region, in this case "Europe".
-    11. App created.
-    12. Go to the Settings tab.
-    13. Go to Config Vars.
-    14. Add 2: first one Key = CREDS and value will be all the information inside the file creds.json that includes private data saved in .gitignore. Second one Key = PORT, value = 8000. This one to improve compatibility with various Python Libraries.
-    15. Add dependencies needed directly from heroku directly from "Add buildpack".
-    16. First one needed is Python.
-    17. Second one needed is "nodejs", which handles the mock terminal code provided.
-    18. Python buildpack must be first in order in the list, second nodejs.
-    19. In the Github terminal command: heroku login -i
-    20. Command: email and password.
-    21. Command: heroku apps.
-    22. Command: heroku git:remote - project-3-exam-results
-    23. Command: git add . && git commit -m "Deploy to heroku via CLI".
-    24. Command: git push origin main
-    25. Command: git push heroku main
+1. In Git terminal: 'pip3 install 'django<4' gunicorn'
+2. 'pip3 install dj_database_url psycopg2'command for database and conection of PostgreSQL
+3. 'pip3 install dj3-cloudinary-storage' command for installing cloudinary for keeping photos online.
+4. 'pip3 freeze --local > requirements.txt' command needed for deployment in heroku.
+5. 'django-admin startproject subtevents .' command to create a neww django project with its name.
+6. 'python4 manage.py startapp events' for command creating the app.
+7. In subtevents, in settings.py, in installed apps add 'events'.
+8. 'python3 manage.py migrate' command for migrating changes and adding them to databse.
+9. Deploying in heroku, create new app.
+10. In resources search for postgress to add database.
+11. In settings reveal config vars.
+12. Copy string from DATABASE_URL
+13. In git at the same level as manage.py create env.py.
+14. In env.py we store secret environment variables.
+15. env.py should be inside .gitignore
+16. in env.py import os and create "os.environ["DATABASE_URL] = string from DATABASE_URL"
+17. Add secret key "os.environ["SECRET_KEY"] = Secret key"
+18. In heroku config vars add SECRET_KEY.
+19. Reference env.py in settings.py
+20. In settings.py change SECRET_KEY to "SECRET_KEY = os.environ.get('SECRET_KEY')"
+21. In settings.py add new section "DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}" 
+22. run "python3 manage.py migrate" Now database is connected to heroku.
+23. For cloudinary set up Cloudinary Visit the Cloudinary website.
+24. Click on the Sign Up For Free button
+25. Provide your name, email address and choose a password
+26. For Primary interest, you can choose Programmable Media for image and video API
+27. Optional: edit your assigned cloud name to something more memorable
+28. Click Create Account
+29. Verify your email and you will be brought to the dashboard.
+30. In cloudinary dashboard copy environment variable without "CLOUDINARY_URL=.
+31. In env.py add 'os.environ["CLOUDINARY_URL"] = "environmentvariable"'.
+32. Add same variable in heroku.
+33. Add in heroku config vars "DISABLE_COLLECTSTATIC = 1" (removed at final deployment) for correct deployment.
+34. In settings.py in installed apps we add cloudinary. First one in the top of django staticfiles and the other one in the bottom:
+ 
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    'events',
+]
 
-## Dependencies
+35. Connect django with cloudinary as follof:
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+ 
+STATIC_URL = '/static/'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+36. We need to tell django where our templates will be store, in settings.py under BASE_DIR:
+ 
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+ 
+37. we change DIRS in TEMPLATES in settings.py:
+
+'DIRS': [TEMPLATES_DIR],
+
+38. ADD heroku host name into allowed hosts in settings.py:
+ 
+ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
+
+39. Create 3 directories in top level. Media, Static and Templates.
+40. Create procfile "web: gunicorn subtevents.wsgi".
+41. Git add ., git commit, git push.
+42. In heroku dashbord, in deploy tab, click on github, search correct project repository, connect with it and finally deploy branch.
+43. Work in project.
+44. For final deployment in settings.py "DEBUG = False" and "X_FRAME_OPTIONS = ‘SAMEORIGIN’".
+45. Errase DISABLE_COLLECSTATIC in heroku config vars.
+46. In heroku deploy tab, manual deploy, deploy branch. 
+
+## Dependencies, frameworks, lenguages and django packages used
 
 - Code Institute template used for ability to deploy the program correctly in Heroku.
-- Gspread, Google API used to be able to communicate python in Github with google sheets. CREDS.json are the private credentials used so the program could connect with spreadsheets in a private gmail.com account in google drive.
+- HTML and Bootsrap, CSS, DJANGO, PYTHON, Javascript and Jquery.
 - Config Vars: Key = PORT, value = 8000 improve compatibility with various Python libraries in heroku. 
-- Python and nodejs, that handles the mock terminal code provided, added in Heroku via "buildpacks".
+- Gunicorn for heroku server, Crispy forms for comments section, Allauth for user registration and Loogin/Loggout, Summernote for admin text editor for the events content, Psycopg2 connect PostgreSQL with Python, Cloudinary for saving media in the cloud. Dj_database_url for DATABASE_URL environment variable to configure your Django application.
+- Git for coding commit and pushing to Github, Github for project code repository store, Heroku python deployment to web, PostgreSQL database.
 
 ## Credits
 
-- All code was done by the student with the support of Code Institute classes, love-sandwiches project and his mentor. 
+- All code was done by the student with the support of Code Institute classes, following "I think there I blog" project construction adaptating it for ΠΛΤΤ Sessions.
+- Comment model was managed and built by the help of the student mentor and Pedro Cristo Portafolio project 4 from Code Institue. 
 
 - All Media content was done and uploaded by the student.
 
 - Code Institute and heroku for deployment terminal.
-

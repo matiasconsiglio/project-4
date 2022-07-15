@@ -7,9 +7,6 @@ from .models import Post, Comment
 class PostAdmin(SummernoteModelAdmin):
     """
     Class for managing post fields in the Admin back end.
-    
-    Parameters:
-    Post event
     """
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
@@ -22,9 +19,6 @@ class PostAdmin(SummernoteModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     """
     Class for managing comments fields in the Admin back end.
-
-    Parameters:
-    Event comment
     """
     list_display = ('name', 'body', 'post', 'created_on', 'approved')
     list_filter = ('approved', 'created_on')

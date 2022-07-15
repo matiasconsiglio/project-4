@@ -10,9 +10,6 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Post(models.Model):
     """
     Model used to define Event attributes both in back and front end.
-
-    Parameters:
-    Model logic used and data arrengement
     """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -59,9 +56,7 @@ class Post(models.Model):
 class Comment(models.Model):
     """
     Model used to define comments attributes per event both in back
-    and front end
-    Parameters:
-    Model logic used and data arrengement
+    and front end.
     """
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")

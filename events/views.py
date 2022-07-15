@@ -10,10 +10,7 @@ from .forms import CommentForm
 
 class EventList(generic.ListView):
     """
-    Class for rendering finished events macro view in base.html
-
-    Parameters:
-    Html list view
+    Class for rendering finished events macro view in base.html.
     """
     model = Post
     queryset = Post.objects.filter(status=1).order_by('-created_on')
@@ -23,14 +20,7 @@ class EventList(generic.ListView):
 
 class EventDetail(View):
     """
-    Class for rendering finished events micro view in base.html
-
-    Parameters:
-    Html list view from event
-    Request:
-    post_detail.html
-    Returns:
-    Html with events attributes with approved comments and likes
+    Class for rendering finished events micro view in base.html.
     """
     def get(self, request, slug, *args, **kwargs):
         queryset = Post.objects.filter(status=1)
@@ -86,12 +76,7 @@ class EventDetail(View):
 
 class PostLike(View):
     """
-    Class used to see if some user has liked the event
-
-    Parameters:
-    View
-    Returns:
-    Relod of base.html and post_detail.html with count of likes updated
+    Class used to see if some user has liked the event.
     """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
@@ -106,7 +91,7 @@ class PostLike(View):
 @login_required
 def delete_comment(request, comment_id):
     """
-    Function for deleting a comment for logged user
+    Function for deleting a comment for logged user.
 
     Parameters:
     request, comment id
@@ -121,10 +106,7 @@ def delete_comment(request, comment_id):
 
 class UpdateComment(LoginRequiredMixin, UpdateView):
     """
-    Function for updating a comment for logged user
-
-    Parameters:
-    LoginRequiredMixin, UpdateView
+    Function for updating a comment for logged user.
     """
     model = Comment
     template_name = 'update_comment.html'
