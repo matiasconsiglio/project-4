@@ -15,7 +15,7 @@
                             <img class="card-img-top"
                                 src="https://codeinstitute.s3.amazonaws.com/fullstack/blog/default.jpg">
                             {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                            <img class="card-img-top" alt"event" src=" {{ post.featured_image.url }}">
                             {% endif %}
                         </div>
                         <a href="{% url 'post_detail' post.slug  %}" class="post-link">
