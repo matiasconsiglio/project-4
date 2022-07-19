@@ -477,6 +477,8 @@ ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
 - CSS
 ![W3C CSS Validator](/assets/readme-images/w3c-css.png)
 
+### W3C HTML
+
 
 
 ## Dependencies, frameworks, lenguages and django packages used
