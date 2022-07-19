@@ -48,9 +48,6 @@ class Post(models.Model):
         self
         """
         return self.likes.count()
-   
-    # def approved_comments(self):
-    #     return self.comments.filter(approved_comment=True)
 
 
 class Comment(models.Model):
@@ -84,7 +81,7 @@ class Comment(models.Model):
     def get_absolute_url(self):
         """
         Returns comments edition to post_deail
-        
+
         Parameters:
         self
         """

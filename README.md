@@ -315,6 +315,30 @@ Iphone 12 pro.
 
 Navbar open menu.
 
+- Admin Back-end
+
+    - Allows the admin to do CRUD in the back-end of the site. with special effect in Comments and Events("Posts")
+
+![Admin image](/assets/readme-images/admin.png)
+
+Admin image.
+
+
+![Admin Comments section](/assets/readme-images/admin-comment.png)
+
+Admin Comments section.
+
+
+![Admin Events section](/assets/readme-images/admin-event.png)
+
+Admin Events section.
+
+
+![Admin Events edit section](/assets/readme-images/admin-event-edit.png)
+
+
+Admin Events edit section.
+
 
 ## Features Left to Implement
 
@@ -409,6 +433,51 @@ ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
 44. For final deployment in settings.py "DEBUG = False" and "X_FRAME_OPTIONS = ‘SAMEORIGIN’".
 45. Errase DISABLE_COLLECSTATIC in heroku config vars.
 46. In heroku deploy tab, manual deploy, deploy branch. 
+
+
+## PEP8 and HTML, CSS validators
+
+### PEP8
+
+- events/admin.py
+![PEP8 events admin.py](/assets/readme-images/pep8-adminpy.png)
+
+- events/apps.py
+![PEP8 events apps.py](/assets/readme-images/pep8-appspy.png)
+
+- events/forms.py
+![PEP8 events forms.py](/assets/readme-images/pep8-formspy.png)
+
+- events/models.py
+![PEP8 events models.py](/assets/readme-images/pep8-modelspy.png)
+
+- events/urls.py
+![PEP8 events urls.py](/assets/readme-images/pep8-urlspy.png)
+
+- events/views.py
+![PEP8 events views.py](/assets/readme-images/pep8-views.png)
+
+- subtevents/asgy.py
+![PEP8 subtevents asgy.py](/assets/readme-images/pep8-asgi.png)
+
+- subtevents/settings.py
+![PEP8 subtevents settings.py](/assets/readme-images/pep8-settingspy.png)
+
+- subtevents/urls.py
+![PEP8 subtevents urls.py](/assets/readme-images/pep8-urls2py.png)
+
+- subtevents/wsgi.py
+![PEP8 subtevents wsgi.py](/assets/readme-images/pep8-wsgipy.png)
+
+- manage.py
+![PEP8 manage.py](/assets/readme-images/pep8-managepy.png)
+
+### W3C CSS
+
+- CSS
+![W3C CSS Validator](/assets/readme-images/w3c-css.png)
+
+
 
 ## Dependencies, frameworks, lenguages and django packages used
 

@@ -249,7 +249,7 @@ body{
     margin-bottom: 75px;
 }
 .navbar-collapse{
-    align-items: right;
+    align-items: flex-end;
 }
 .youtube{
     width: 900px;

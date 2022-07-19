@@ -119,4 +119,3 @@ class UpdateComment(LoginRequiredMixin, UpdateView):
         comment.save()
 
         return HttpResponseRedirect(self.get_success_url())
-    
