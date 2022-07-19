@@ -12,7 +12,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
 
-X_FRAME_OPTIONS = ‘SAMEORIGIN’
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
 
