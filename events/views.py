@@ -108,8 +108,7 @@ def delete_comment(request, comment_id):
 
 @login_required
 def update_comment(request, comment_id):
-    comment = get_object_or_404(Comment, id=comment_id)
-    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
+    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.GET)
     if request.method == 'POST':
         if form.is_valid():
             new_form = form.save(commit=False)

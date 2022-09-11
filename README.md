@@ -216,9 +216,9 @@ Redirect to home after sign out with message.
 Session first view liked by the user and message.
 
 
-![Home page with like](/assets/readme-images/home-like.png)
+![Home page with like](/assets/readme-images/home-dislike.png)
 
-Session first view liked by the user and message.
+Session first view disliked by the user and message.
 
 
 ![Event guest dj video and audio](/assets/readme-images/session2-2.png)
@@ -236,19 +236,14 @@ Guest Dj media.
 ΠΛΤΤ media.
 
 
-![Matt media 3](/assets/readme-images/mattmedia3.png)
-
-ΠΛΤΤ media.
-
-
 ![Logged in comment view](/assets/readme-images/loggedin-comment-view.png)
 
-Logged-in comment view.
+Logged-in comment view plus comments made by the logged in user.
 
 
 ![Logged in commented waiting for approval](/assets/readme-images/comment-view-waiting-approval.png)
 
-Logged-in comment sent waiting for approval.
+Logged-in comment sent waiting for approval and message.
 
 
 ![Logged in comments view](/assets/readme-images/loggedin-comment-approved.png)
@@ -263,13 +258,10 @@ Logged-out comment section.
 
 - Update comment.
     - Only available for logged in users and for updating their own users comment.
-    - Sends you to another page to update and send your new comment
+    - Sends you to another page to update and send your new comment, after update the user is sent to the home page.
     - New comment needs approval.
-    - Old comment gets deleted.
-
-![Logged in comments view](/assets/readme-images/loggedin-comment-approved.png)
-
-Logged-in comment section after approval.
+    - Old comment after update dissapears.
+    - Message to user "waiting for approval" after update.
 
 
 ![Update comment view](/assets/readme-images/update-comment.png)
