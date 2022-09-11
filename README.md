@@ -213,12 +213,12 @@ Redirect to home after sign out with message.
  
 ![Event post intro plus like option](/assets/readme-images/session2-1.png)
 
-Event first view liked by the user.
+Session first view liked by the user and message.
 
 
 ![Home page with like](/assets/readme-images/home-like.png)
 
-Home page with like.
+Session first view liked by the user and message.
 
 
 ![Event guest dj video and audio](/assets/readme-images/session2-2.png)
