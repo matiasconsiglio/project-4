@@ -70,6 +70,11 @@ This events blog style, for the Full Stack Project from Code Institute, consists
 14. View Media from Events:
     - As a Site User I can see and/or listen to different media from the event so that I can understand and feel how the event was.
 
+15. Contact Form:
+    - As a Site User I can contact the admin for further questions about different sessions.
+
+    In the following link the Agile methodology is shown including epics and acceptance criteria.
+
 ### [Agile Methodology used to accomplish the goals from the project via User Stories](https://github.com/matiasconsiglio/project-4/projects/1)
 
 ### Diagram for UX design and mock-up
@@ -108,16 +113,11 @@ This events blog style, for the Full Stack Project from Code Institute, consists
     - Allows the user to click on "Session #number" to go inside each event and see different information and media from it.
     - Show the social media from ΠΛΤΤ Sessions for users to be able to reach and follow.
     - In case the user is logged in, the navbar won't show register and login, instead will show the option Logout.
+    - For resubmission, contact (model) was added to the project, now the user can contact the admin without needing to be logged in neither registered.
 
 ![First blog approach](/assets/readme-images/first-run.png)
 
 First blog approach.
-
-
-![Blog Logout](/assets/readme-images/first-run-logout.png)
-
-Blog log out option and message.
-
 
 - Register for User.
 
@@ -129,6 +129,7 @@ Blog log out option and message.
     - Messages shown in case the name of the user already exists.
     - Navbar and footer keeps the style of the welcome page.
     - Link that allows you to go to the sign in page in case you already have an account created.
+    - Message for successfull registration.
 
  
 ![Registration](/assets/readme-images/register.png)
@@ -136,9 +137,14 @@ Blog log out option and message.
 Register page with link to sign in page.
 
 
-![User already exist](/assets/readme-images/user-exist.png)
+![User already exist](/assets/readme-images/user-exists.png)
 
 User message already exist.
+
+
+![Successful registration](/assets/readme-images/successfull-registration.png)
+
+Successful registration.
 
 
 - Login for User.
@@ -150,6 +156,7 @@ User message already exist.
     - Message shown in case the username or password is incorrect.
     - Navbar and footer keeps the style of the welcome page.
     - Link that allows you to go to the register page in case you don't have an account created.
+    - Message for successfull login.
 
 ![Login](/assets/readme-images/login.png)
 
@@ -161,12 +168,18 @@ Login Page with message and link for register.
 Incorrect login. 
 
 
+![Successfull login](/assets/readme-images/successfull-login.png)
+
+Successfull login. 
+
+
 - Logout
 
     - Logout message asking the user if it is sure they want to logout.
     - Sign out button.
     - Navbar and footer keeps the style of welcome page.
     - Once Sign Out is clicked the user is redirected to the home page.
+    - Message for successfull logout.
 
 
 ![Logout](/assets/readme-images/logout.png)
@@ -174,9 +187,9 @@ Incorrect login.
 Sign out confirmation page.
 
 
-![Home](/assets/readme-images/first-run.png)
+![Home](/assets/readme-images/logout-message.png)
 
-Redirect to home after sign out.
+Redirect to home after sign out with message.
 
 
 - Event

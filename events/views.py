@@ -82,11 +82,10 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
-            messages.success(request, "1.")
+            messages.success(request, "You don't like the session anymoer :(")
         else:
             post.likes.add(request.user)
-            messages.success(request, "2.")
-        messages.success(request, "3.")
+            messages.success(request, "You liked the session!")
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
