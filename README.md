@@ -72,11 +72,27 @@ This events blog style, for the Full Stack Project from Code Institute, consists
 
 ### [Agile Methodology used to accomplish the goals from the project via User Stories](https://github.com/matiasconsiglio/project-4/projects/1)
 
-### Diagram for UX design
+### Diagram for UX design and mock-up
 
 ![Diagram for Ux Design](/assets/readme-images/diagram.png)
 
 - All the special pages for login, register, logout and update comment should share the same navbar and footer as the main view.
+
+![Home and Sessions view mock-up](/assets/readme-images/mockup-1.png)
+
+- Home and Sessions view mock-up.
+
+![Session details mock-up](/assets/readme-images/mockup-2.png)
+
+- Session details mock-up
+
+![Session details plus comments mock-up](/assets/readme-images/mockup-3.png)
+
+- Session details plus comments mock-up.
+
+![Contact form mock-up](/assets/readme-images/mockup-4.png)
+
+- Contact form mock-up.
 
 ## Features
 
@@ -338,6 +354,10 @@ Admin Events section.
 
 
 Admin Events edit section.
+
+![Database schema](/assets/readme-images/database-schema.png)
+
+- The Comment model is connected with the post attribute as a foreign key to the Model Post, so there is a direct relation for each session to have exclusive comments, if the session is deleted, also the comments from that session will be deleted. The new model for resubmission consists in a Contact model for Contact form that will allow any user, no need of being logged in, to contact the admin, with name, subject, email, and body text as requirement. This form will be submitted to the back end.
 
 
 ## Features Left to Implement

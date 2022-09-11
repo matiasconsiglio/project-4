@@ -2,9 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.views.generic import UpdateView
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, Comment
 from .forms import CommentForm, ContactForm
 
