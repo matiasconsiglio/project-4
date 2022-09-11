@@ -108,7 +108,15 @@ def delete_comment(request, comment_id):
 
 @login_required
 def update_comment(request, comment_id):
-    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.GET)
+    """
+    Function for updating a comment for logged user.
+
+    Parameters:
+    request, comment id
+    Returns:
+    Home view with message for waiting approval.
+    """
+    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
     if request.method == 'POST':
         if form.is_valid():
             new_form = form.save(commit=False)
