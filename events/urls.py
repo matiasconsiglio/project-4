@@ -10,7 +10,8 @@ urlpatterns = [
     path('<slug:slug>/', views.EventDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path(
-     'update_comment/<int:pk>',
-     views.UpdateComment.as_view(), name='update_comment'
-    ),
+     'update_comment/<int:comment_id>',
+     views.update_comment, name='update_comment'
+     ),
+    path("contact_form", views.contact_form, name='contact_form')
 ]

@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib import messages
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.views.generic import UpdateView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, ContactForm
 
 
 class EventList(generic.ListView):
@@ -82,9 +83,11 @@ class PostLike(View):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.success(request, "1.")
         else:
             post.likes.add(request.user)
-
+            messages.success(request, "2.")
+        messages.success(request, "3.")
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
@@ -100,22 +103,35 @@ def delete_comment(request, comment_id):
     """
     comment = get_object_or_404(Comment, id=comment_id)
     comment.delete()
+    messages.success(request, "Your comment was successfully deleted.")
     return HttpResponseRedirect(reverse(
         'post_detail', args=[comment.post.slug]))
 
 
-class UpdateComment(LoginRequiredMixin, UpdateView):
+def update_comment(request, comment_id):
+    comment = get_object_or_404(Comment, id=comment_id)
+    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
+    if request.method == 'POST':
+        if form.is_valid():
+            form.save()
+            comment.approved = False
+        messages.success(request, "Your comment is waiting for approval.")
+        return redirect(reverse('home'))
+
+    return render(request, 'update_comment.html', {'form': form})
+
+def contact_form(request):
     """
-    Function for updating a comment for logged user.
+    View for contact form
     """
-    model = Comment
-    template_name = 'update_comment.html'
-    form_class = CommentForm
-
-    def form_valid(self, form):
-
-        comment = form.save()
-        comment.approved = False
-        comment.save()
-
-        return HttpResponseRedirect(self.get_success_url())
+    form = ContactForm()
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+        messages.success(request, "Your message was sent successfully.")
+        return redirect(reverse('home'))
+    context = {
+        'form': form
+    }
+    return render(request, 'contact_form.html', context)

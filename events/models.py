@@ -86,3 +86,22 @@ class Comment(models.Model):
         self
         """
         return reverse('post_detail', args=[self.post.slug])
+
+
+class Contact(models.Model):
+    """
+    Model used to contact the admin. Matt.
+    """
+    name = models.CharField(max_length=50)
+    email = models.EmailField(blank=False)
+    subject = models.CharField(max_length=255)
+    body = models.TextField()
+    
+    def __str__(self):
+        """
+        Returns whole form
+
+        Parameters:
+        self
+        """
+        return self.email

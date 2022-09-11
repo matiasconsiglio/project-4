@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center card-text">
+            <h2 class="title space-top-double">Contact ΠΛΤΤ</h2>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+            <button type="submit" class="btn btn-signup btn-lg">Contact</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

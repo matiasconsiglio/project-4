@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 <head>
-    <title>ΠΛΤΤ Sessionss</title>
+    <title>ΠΛΤΤ Sessions</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
     <nav class="header navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <div class="header-left">
-            <a class="first-logo" href="{% url 'home' %}">ΠΛaΤΤ</a>
+            <a class="first-logo" href="{% url 'home' %}">ΠΛΤΤ</a>
             <a class="second-logo fixed-left" href="{% url 'home' %}">Sessions</a>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -32,6 +32,9 @@
                 <ul class="menu ms-auto">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact_form' %}">Contact</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -49,9 +52,10 @@
             </div>
         </div>
     </nav>
-    <main class="flex-shrink-0 main-bg">
-        {% block content %}
-        {% endblock content %}
+    <main class="flex-shrink-0 main-bg">   
+    {% include 'messages.html' %}
+    {% block content %}
+    {% endblock content %}
     </main>
     <footer class="footer">
         <ul class="social-networks">
