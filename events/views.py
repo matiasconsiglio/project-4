@@ -116,7 +116,9 @@ def update_comment(request, comment_id):
     Returns:
     Home view with message for waiting approval.
     """
-    form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
+    form = CommentForm(
+        instance=Comment.objects.get(id=comment_id), data=request.POST
+        )
     if request.method == 'POST':
         if form.is_valid():
             new_form = form.save(commit=False)
@@ -126,6 +128,7 @@ def update_comment(request, comment_id):
         return redirect(reverse('home'))
 
     return render(request, 'update_comment.html', {'form': form})
+
 
 def contact_form(request):
     """

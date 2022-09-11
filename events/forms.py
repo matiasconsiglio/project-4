@@ -13,10 +13,14 @@ class CommentForm(forms.ModelForm):
         model = Comment
         fields = ('body',)
 
+
 class ContactForm(forms.ModelForm):
     """
-    Class form to contact the admin
+    Class form to contact the admin-
     """
     class Meta:
+        """
+        Body of the form
+        """
         model = Contact
         fields = '__all__'

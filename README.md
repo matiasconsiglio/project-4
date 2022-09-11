@@ -258,9 +258,7 @@ Logged-out comment section.
 
 - Update comment.
     - Only available for logged in users and for updating their own users comment.
-    - Sends you to another page to update and send your new comment, after update the user is sent to the home page.
-    - New comment needs approval.
-    - Old comment after update dissapears.
+    - Sends you to another page to update and send your new comment, after update the user is sent to the home page, aslo user gets a new blank space for the new comment to be updated, old one will be errased. In the back end the comment is processed as one.
     - Message to user "waiting for approval" after update.
 
 
@@ -278,17 +276,12 @@ Update comment waiting for approval.
 
 Update comment view after approval.
 
-
-![Different user logged in comments view](/assets/readme-images/different-user-logged-comment-view.png)
-
-Different user logged in comments view.
-
-  
 - Delete comment.
    - Only available for logged in users and for deleting their own comments.
    - Pop-up message with back and delete confirmation option.
+   - Success message after deleting comment.
 
-![Delete in comments view](/assets/readme-images/delete-comment.png)
+![Delete in comments view](/assets/readme-images/update-comment-approved.png)
 
 Delete in comments view logged in as author.
 
@@ -300,22 +293,33 @@ Delete pop-up message confirmation.
 
 ![View after choosing back deleting](/assets/readme-images/delete-comment-back.png)
 
-View after choosing back deleting.
+View after choosing back deleting and message.
 
 
 ![View after deleting comment](/assets/readme-images/deleted-comment.png)
 
 View after deleting comment.
 
+- Contact.
+    - New Model for resubmission.
+    - Allows all users to contact the admin of the site.
+    - Requires name, subject, email and body text.
+    - Shows success message after submiting the form.
 
-![Delete option view for different user than author](/assets/readme-images/delete-comment-other-user-logged-in.png)
 
-Delete option view for different user than author of comment.
+![Contact form](/assets/readme-images/contact.png)
 
+Contact form.
+
+
+![Contact form success](/assets/readme-images/contact-success.png)
+
+Contact form success.
 
 - Responsive on all device sizes and has interactive elements.
 
     - Web, Ipad Air and Iphone 12 pro.
+
 
 ![Welcome image](/assets/readme-images/first-run.png)
 
@@ -350,6 +354,11 @@ Admin image.
 Admin Comments section.
 
 
+![Admin Comments edit section](/assets/readme-images/admin-comment-edit.png)
+
+Admin Comments edit section.
+
+
 ![Admin Events section](/assets/readme-images/admin-event.png)
 
 Admin Events section.
@@ -360,6 +369,17 @@ Admin Events section.
 
 Admin Events edit section.
 
+
+![Admin Contact section](/assets/readme-images/admin-contact.png)
+
+Admin Contact section.
+
+
+![Admin Contact edit section](/assets/readme-images/admin-contact-edit.png)
+
+
+Admin Contact edit section.
+
 ![Database schema](/assets/readme-images/database-schema.png)
 
 - The Comment model is connected with the post attribute as a foreign key to the Model Post, so there is a direct relation for each session to have exclusive comments, if the session is deleted, also the comments from that session will be deleted. The new model for resubmission consists in a Contact model for Contact form that will allow any user, no need of being logged in, to contact the admin, with name, subject, email, and body text as requirement. This form will be submitted to the back end.
@@ -369,12 +389,12 @@ Admin Events edit section.
 
 - Allow the user to change the password.
 - Allow the user to recover the password.
-- Updated comment message "waiting to be approved".
+- (Solved) Updated comment message "waiting to be approved".
 
 
 ### Bugs
 
-- If a Logged-in User comments a posta and after that the Admin approves the comment, then the user refreshes the page, the message "comment waiting for approval" will still be there instead of the possibility to create a new comment. For this the user needs to go home and then back to the event page to be able to comment again.
+- (Solved) If a Logged-in User comments a session and after that the Admin approves the comment, then the user refreshes the page, the message "comment waiting for approval" will still be there instead of the possibility to create a new comment. For this the user needs to go home and then back to the event page to be able to comment again.
 
 - After final deployment, css was not being shown. First problem was that "X_FRAME_OPTIONS = 'SAMEORIGIN'" was writen with "``" instead. Second problem was that in base.html "<link rel="stylesheet" type="text/css" href=" {% static 'css/style.css' %} ">" was written like <link rel="stylesheet" type="text/css" href=" {% static '/css/style.css' %} "> instead. Bug Fixed.
 
