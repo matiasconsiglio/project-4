@@ -57,6 +57,7 @@ class EventDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.success(request, "Your comment is waiting for approval.")
         else:
             comment_form = CommentForm()
 
@@ -129,9 +130,9 @@ def contact_form(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Your message was sent successfully.")
         return redirect(reverse('home'))
-    
-    messages.success(request, "Your message was sent successfully.")
+
     context = {
         'form': form
     }

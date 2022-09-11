@@ -256,6 +256,14 @@ body{
     height: 700px;
 
 }
+
+.alert {
+    margin-top: 150px !important;
+}
+
+.alert-success {
+    margin-top: 150px !important;
+}
 @media only screen and (max-width:1000px){
 
     .social-networks > li{
