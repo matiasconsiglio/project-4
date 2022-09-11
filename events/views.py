@@ -129,8 +129,9 @@ def contact_form(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-        messages.success(request, "Your message was sent successfully.")
         return redirect(reverse('home'))
+    
+    messages.success(request, "Your message was sent successfully.")
     context = {
         'form': form
     }

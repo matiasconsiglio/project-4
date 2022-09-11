@@ -52,9 +52,10 @@
             </div>
         </div>
     </nav>
+
     <main class="flex-shrink-0 main-bg">   
-    {% include 'messages.html' %}
     {% block content %}
+    {% include 'messages.html' %}
     {% endblock content %}
     </main>
     <footer class="footer">
