@@ -106,13 +106,15 @@ def delete_comment(request, comment_id):
         'post_detail', args=[comment.post.slug]))
 
 
+@login_required
 def update_comment(request, comment_id):
     comment = get_object_or_404(Comment, id=comment_id)
     form = CommentForm(instance=Comment.objects.get(id=comment_id), data=request.POST)
     if request.method == 'POST':
         if form.is_valid():
-            form.save()
-            comment.approved = False
+            new_form = form.save(commit=False)
+            new_form.approved = False
+            new_form.save()
         messages.success(request, "Your comment is waiting for approval.")
         return redirect(reverse('home'))
 
