@@ -2,7 +2,7 @@
 
 This events blog style, for the Full Stack Project from Code Institute, consists in showing and allowing the users to see different events produced by ΠΛΤΤ at Rex Malmo Bar. Each event is shown in the principal page with a flyer. This flyer shows the location, different DJs that will play in future events or already played, dates and times. The user is able to click and see different media and information from each event, including: photos, videos, guest dj, bibliography, social media and an embedded Soundcloud set with the music played in the event. Also the user is able to register and login in the site, this will allow them to like and comment on each event. Finally the user will be able to update personal comments or delete them.
 
-[Here is the live version of my project](https://project-3-exam-results.herokuapp.com/)***
+[Here is the live version of my project](https://subtevents.herokuapp.com/)
 
 ![Welcome image](/assets/readme-images/first-run.png)
 
@@ -35,7 +35,7 @@ This events blog style, for the Full Stack Project from Code Institute, consists
     - As an Admin I can create draft events so that I can finish uploading the content later.
 
 3. Approve Comments.
-    - As a an Admin I can approve or disapprove comments so that I can filter out objectionable comments.
+    - As an Admin I can approve or disapprove comments so that I can filter out objectionable comments.
 
 4. Site Pagination:
     - As a Site User I can view a paginated list of events so that I can easily select a post to view.
@@ -113,7 +113,7 @@ This events blog style, for the Full Stack Project from Code Institute, consists
     - Allows the user to click on "Session #number" to go inside each event and see different information and media from it.
     - Show the social media from ΠΛΤΤ Sessions for users to be able to reach and follow.
     - In case the user is logged in, the navbar won't show register and login, instead will show the option Logout.
-    - For resubmission, contact (model) was added to the project, now the user can contact the admin without needing to be logged in neither registered.
+    - For resubmission, contact (model) was added to the project, now the user can contact the admin without needing to be logged in nor registered.
 
 ![First blog approach](/assets/readme-images/first-run.png)
 
@@ -129,7 +129,7 @@ First blog approach.
     - Messages shown in case the name of the user already exists.
     - Navbar and footer keeps the style of the welcome page.
     - Link that allows you to go to the sign in page in case you already have an account created.
-    - Message for successfull registration.
+    - Message for successful registration.
 
  
 ![Registration](/assets/readme-images/register.png)
@@ -139,7 +139,7 @@ Register page with link to sign in page.
 
 ![User already exist](/assets/readme-images/user-exists.png)
 
-User message already exist.
+User messages already exist.
 
 
 ![Successful registration](/assets/readme-images/successfull-registration.png)
@@ -156,7 +156,7 @@ Successful registration.
     - Message shown in case the username or password is incorrect.
     - Navbar and footer keeps the style of the welcome page.
     - Link that allows you to go to the register page in case you don't have an account created.
-    - Message for successfull login.
+    - Message for successful login.
 
 ![Login](/assets/readme-images/login.png)
 
@@ -168,18 +168,18 @@ Login Page with message and link for register.
 Incorrect login. 
 
 
-![Successfull login](/assets/readme-images/successfull-login.png)
+![Successful login](/assets/readme-images/successfull-login.png)
 
-Successfull login. 
+Successful login. 
 
 
 - Logout
 
     - Logout message asking the user if it is sure they want to logout.
     - Sign out button.
-    - Navbar and footer keeps the style of welcome page.
+    - Navbar and footer keeps the style of the welcome page.
     - Once Sign Out is clicked the user is redirected to the home page.
-    - Message for successfull logout.
+    - Message for successful logout.
 
 
 ![Logout](/assets/readme-images/logout.png)
@@ -189,7 +189,7 @@ Sign out confirmation page.
 
 ![Home](/assets/readme-images/logout-message.png)
 
-Redirect to home after sign out with message.
+Redirect to home after signing out with a message.
 
 
 - Event
@@ -257,8 +257,8 @@ Logged-out comment section.
 
 
 - Update comment.
-    - Only available for logged in users and for updating their own users comment.
-    - Sends you to another page to update and send your new comment, after update the user is sent to the home page, aslo user gets a new blank space for the new comment to be updated, old one will be errased. In the back end the comment is processed as one.
+    - Only available for logged in users and for updating their own users' comment.
+    - Sends you to another page to update and send your new comment, after update the user is sent to the home page, aslo user gets a new blank space for the new comment to be updated, the old one will be erased. In the back end the comment is processed as one.
     - Message to user "waiting for approval" after update.
 
 
@@ -304,7 +304,7 @@ View after deleting comment.
     - New Model for resubmission.
     - Allows all users to contact the admin of the site.
     - Requires name, subject, email and body text.
-    - Shows success message after submiting the form.
+    - Shows success message after submitting the form.
 
 
 ![Contact form](/assets/readme-images/contact.png)
@@ -403,16 +403,16 @@ Admin Contact edit section.
 
 - The site was deployed to heroku.com using Code Institute's mock terminal for Heroku. For this it is needed to install Django and supporting libraries, create a new blank Django project and app, set the project to use cloudinary and PostgreSQL and deploy to heroku.
 
-1. In Git terminal: 'pip3 install 'django<4' gunicorn'
-2. 'pip3 install dj_database_url psycopg2'command for database and conection of PostgreSQL
+1. In the Git terminal: 'pip3 install 'django<4' gunicorn'
+2. 'pip3 install dj_database_url psycopg2' command for database and connection of PostgreSQL
 3. 'pip3 install dj3-cloudinary-storage' command for installing cloudinary for keeping photos online.
 4. 'pip3 freeze --local > requirements.txt' command needed for deployment in heroku.
-5. 'django-admin startproject subtevents .' command to create a neww django project with its name.
+5. 'django-admin startproject subtevents .' command to create a new django project with its name.
 6. 'python4 manage.py startapp events' for command creating the app.
 7. In subtevents, in settings.py, in installed apps add 'events'.
-8. 'python3 manage.py migrate' command for migrating changes and adding them to database.
-9. Deploying in heroku, create new app.
-10. In resources search for postgress to add database.
+8. 'python3 manage.py migrate' command for migrating changes and adding them to the database.
+9. Deploying in heroku, create a new app.
+10. In resources search for postgres to add a database.
 11. In settings reveal config vars.
 12. Copy string from DATABASE_URL
 13. In git at the same level as manage.py create env.py.
@@ -433,7 +433,7 @@ Admin Contact edit section.
 28. Click Create Account
 29. Verify your email and you will be brought to the dashboard.
 30. In cloudinary dashboard copy environment variable without "CLOUDINARY_URL=.
-31. In env.py add 'os.environ["CLOUDINARY_URL"] = "environmentvariable"'.
+31. In env.py add 'os.environ["CLOUDINARY_URL"] = "environment variable"'.
 32. Add same variable in heroku.
 33. Add in heroku config vars "DISABLE_COLLECTSTATIC = 1" (removed at final deployment) for correct deployment.
 34. In settings.py in installed apps we add cloudinary. First one in the top of django staticfiles and the other one in the bottom:
@@ -476,7 +476,7 @@ ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
 40. Create procfile "web: gunicorn subtevents.wsgi".
 41. Git add ., git commit, git push.
 42. In heroku dashboard, in the deploy tab, click on github, search the correct project repository, connect with it and finally deploy the branch.
-43. Work in the project.
+43. Work on the project.
 44. For final deployment in settings.py "DEBUG = False" and "X_FRAME_OPTIONS = ‘SAMEORIGIN’".
 45. Erase DISABLE_COLLECSTATIC in heroku config vars.
 46. In heroku deploy tab, manual deploy, deploy branch. 
@@ -536,7 +536,7 @@ ALLOWED_HOSTS = ['subtevents.herokuapp.com', 'localhost']
 ## Dependencies, frameworks, languages and django packages used
 
 - Code Institute template used for ability to deploy the program correctly in Heroku.
-- HTML and Bootsrap, CSS, DJANGO, PYTHON, Javascript and Jquery.
+- HTML and Bootstrap, CSS, DJANGO, PYTHON, Javascript and Jquery.
 - Config Vars: Key = PORT, value = 8000 improve compatibility with various Python libraries in heroku. 
 - Gunicorn for heroku server, Crispy forms for comments section, Allauth for user registration and Login/Loggout, Summernote for admin text editor for the events content, Psycopg2 connect PostgreSQL with Python, Cloudinary for saving media in the cloud. Dj_database_url for DATABASE_URL environment variable to configure your Django application.
 - Git for coding commit and pushing to Github, Github for project code repository store, Heroku python deployment to web, PostgreSQL database.
