@@ -1,1 +1,1 @@
-web gunicorn subtevents.wsgi:application
+web: gunicorn subtevents.wsgi:application
