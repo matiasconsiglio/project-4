@@ -11,7 +11,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -33,6 +33,8 @@ INSTALLED_APPS = [
     'events',
     'crispy_forms',
     'django_summernote',
+    'bootstrap4',
+    'crispy_bootstrap4',
 ]
 
 SITE_ID = 1
@@ -114,7 +116,7 @@ USE_L10N = True
 USE_TZ = True
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 STATIC_URL = '/static/'
