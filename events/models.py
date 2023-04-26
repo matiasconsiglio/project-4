@@ -29,7 +29,7 @@ class Post(models.Model):
         """
         Class for ordering events
         """
-        ordering = ["created_on"]
+        ordering = ["-created_on"]
 
     def __str__(self):
         """
