@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'events',
     'crispy_forms',
     'django_summernote',
+    'django_extensions',
 ]
 
 SITE_ID = 1
