@@ -10,7 +10,7 @@ This events blog style, for the Full Stack Project from Code Institute, consists
 
 ### Project Goals
 
-- Create a full Stack project based on an Event Blog Style application.
+- Create a full Stack project based on an Event Blog Style application
 
 - External User's goal:
     - User wants to see what's going on at ΠΛΤΤ Sessions in Rex Malmo Bar, also be able to like and comment on different events.
